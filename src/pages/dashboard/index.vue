@@ -47,9 +47,9 @@
             <div class="convert-box">
                 <ul class="convert-tablist list-style" role="tablist">
                     <li style="width: 33%" class="nav-item">
-                        <a class="active" href="/?step=1"><i class="ri-exchange-dollar-line"></i>Send Money</a>
+                        <a class="active" href="/?step=1"><i class="ri-exchange-dollar-line"></i>History</a>
                     </li>
-                  <!--   <li style="width: 33%" class="nav-item">
+                    <!--   <li style="width: 33%" class="nav-item">
                         <a href="/?step=2"><i class="ri-send-plane-line"></i>Confirm</a>
                     </li> -->
                     <!-- <li style="width: 33%" class="nav-item">
@@ -58,50 +58,54 @@
                 </ul>
 
                 <div class="convert-tabcontent">
-                    <form action="#" class="convert-form">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label for="country_from">E-naira Wallet Address</label>
-                                    <input type="text" name="">
-                                </div>
-                            </div>
+                    <section class="exchange-table-wrap pb-75">
+                        <div class="container">
+                            <div class="row gx-5">
+                                <div class="col-lg-12">
+                                    <div class="section-title style1 text-center mb-25">
+                                        <h2>Recent Transactions</h2>
+                                    </div>
+                                    <div class="exchange-table style2">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Currency</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">E-Naira Wallet</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>USD</td>
+                                                    <td>1.06430</td>
+                                                    <td><span class="text-green">HHSDYDYSJHHJHDJJHS</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>USD</td>
+                                                    <td>1.06430</td>
+                                                    <td><span class="text-green">HHSDYDYSJHHJHDJJHS</span></td>
+                                                </tr>
 
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="country_from">Amount</label>
-                                    <input type="text" name="">
+                                                <tr>
+                                                    <td>USD</td>
+                                                    <td>1.06430</td>
+                                                    <td><span class="text-green">HHSDYDYSJHHJHDJJHS</span></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>USD</td>
+                                                    <td>1.06430</td>
+                                                    <td><span class="text-green">HHSDYDYSJHHJHDJJHS</span></td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-1 text-center">
-                                <span class="convert-icon">
-                                    <i class="ri-arrow-left-right-line"></i>
-                                </span>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label for="currency_to">Currency</label>
-                                    <select name="country_to" id="country_to">
-                                        <option value="1">EUR - Euro</option>
-                                        <option value="2">USD - US Dollar</option>
-                                        <option value="3">CAD - Canadian Dollar</option>
-                                        <option value="3">GHS - Ghana Cedis</option>
-                                    </select>
-                                </div>
+                                
                             </div>
                         </div>
-                        <div class="row mt-20 align-items-center">
-                            <div class="col-xl-6 col-lg-8">
-                                <div class="converter-alert-text">
-                                    <i class="ri-error-warning-line"></i>
-                                    <p>We use mid-market rate for our converter. This is for international purpose only. You won't recieve this rate when send money. <a href="chart.html" class="link style1">Check send rates</a></p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-4 text-lg-end">
-                                <a class="btn style1">Send<i class="ri-arrow-right-s-line"></i></a>
-                            </div>
-                        </div>
-                    </form>
+                    </section>
                 </div>
             </div>
         </section>
@@ -118,42 +122,38 @@
 </route>
 
 <script>
-    import { useMeta } from 'vue-meta'
-    import { computed, ref } from 'vue'
-    import { useRouter } from 'vue-router'
-    import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
-    export default {
-        setup() {
-            useMeta({
-                title: 'Home',
-            })
-            const router = useRouter()
-            return {
-                router
-            }
-        },
-        data() {
-            return {
-                user:{
-
-                }
-            }
-        },
-        computed: {},
-        mounted() {},
-        methods: {
-            ...mapActions('auth', ['login', 'logout']),
-            async postLogin(){
-
-                this.logout();
-                await this.login(this.user)
-                .then((res) =>{
+import { useMeta } from 'vue-meta'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
+export default {
+    setup() {
+        useMeta({
+            title: 'Home',
+        })
+        const router = useRouter()
+        return {
+            router
+        }
+    },
+    data() {
+        return {
+            user: {}
+        }
+    },
+    computed: {},
+    mounted() {},
+    methods: {
+        ...mapActions('auth', ['login', 'logout']),
+        async postLogin() {
+            this.logout();
+            await this.login(this.user)
+                .then((res) => {
                     // this.router.push('dashboard')
                     window.location = '/dashboard'
                 })
-
-            }
         }
     }
+}
 
 </script>

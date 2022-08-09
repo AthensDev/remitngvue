@@ -87,7 +87,7 @@
             return {
                 amount: '',
                 wallet: '',
-                currency: 'NGN'
+                currency: 'USD'
             }
         },
         computed: {
@@ -119,41 +119,6 @@
         },
         methods: {
             ...mapActions('auth', ['login', 'logout', 'verifyFlutterwave']),
-            async postLogin(){
-
-                this.logout();
-                await this.login(this.user)
-                .then((res) =>{
-                    // this.router.push('dashboard')
-                    window.location = '/dashboard'
-                })
-            },
-
-           makePayment() {
-                FlutterwaveCheckout({
-                  public_key: this.$config.FLWPUBK,
-                  tx_ref: "titanic-48981487343MDI0NzMx",
-                  amount: this.amount,
-                  currency: this.currency,
-                  payment_options: "card, banktransfer, ussd",
-                  redirect_url: "https://remitngapp.netlify.app/dashboard",
-                  meta: {
-                    consumer_id: 23,
-                    consumer_mac: "92a3-912ba-1192a",
-                  },
-                  customer: {
-                    email: this.user.email ?? "rose@unsinkableship.com",
-                    phone_number: "08102909304",
-                    name: this.user.first_name + this.user.last_name ?? "Rose DeWitt Bukater",
-                  },
-                  customizations: {
-                    title: "RemitNG",
-                    description: "Payment for seamless transfer",
-                    logo: "https://remitngapp.netlify.app/assets/img/logo.png",
-                  },
-                });
-            }
-
         }
     }
 

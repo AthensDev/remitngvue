@@ -136,7 +136,7 @@
             return {
                 amount: '',
                 wallet: '',
-                currency: 'NGN'
+                currency: 'USD'
             }
         },
         computed: {
@@ -158,10 +158,10 @@
 
             },
 
-           makePayment() {
+            makePayment() {
                 FlutterwaveCheckout({
                   public_key: this.$config.FLWPUBK,
-                  tx_ref: "titanic-48981487343MDI0NzMx",
+                  tx_ref: this.generateReference(),
                   amount: this.amount,
                   currency: this.currency,
                   payment_options: "card, banktransfer, ussd",
@@ -181,7 +181,12 @@
                     logo: "https://remitngapp.netlify.app/assets/img/logo.png",
                   },
                 });
-            }
+            },
+
+            generateReference() {
+                let date = new Date()
+                return date.getTime().toString();
+            },
 
         }
     }
