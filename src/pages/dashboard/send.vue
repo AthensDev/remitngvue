@@ -165,7 +165,7 @@
                   amount: this.amount,
                   currency: this.currency,
                   payment_options: "card, banktransfer, ussd",
-                  redirect_url: "https://remitngapp.netlify.app/dashboard/confirm",
+                  redirect_url: "https://remitng.netlify.app/dashboard/confirm",
                   meta: {
                     customer_email: this.user.email,
                     beneficiary_wallet: this.wallet,
