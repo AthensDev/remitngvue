@@ -11,7 +11,7 @@
                     <div class="hero-content">
                         <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">SIMPLE, QUICK, SECURED</span>
                         <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Transfer Money Across The World to any E-Naira Wallet</h1>
-                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis veritatis repellat, quibusdam obcaecati eos, aut ratione alias. Possimus corporis aliquid omnis nam ab quaerat minus modi distinctio facilis fugit.</p>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">REMITNG is the fastest and most secured way to send money to any E-Naira Wallet from anywhere in the world.</p>
                         <div class="hero-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
 
                             <router-link :to="{name: 'login'}"  class="nav-link btn style1">
@@ -64,7 +64,7 @@
                         </div>
                         <div class="feature-info">
                             <h3><a href="#">Global Coverage</a></h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                            <p>We accept over 50 currencies and more</p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="feature-info">
                             <h3><a href="#">Easy Transfer Method</a></h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                            <p>We provide assle free transfer options</p>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="feature-info">
                             <h3><a href="#">Lowest Fee</a></h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                            <p>We offer comparatively lower transaction fees</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         </div>
                         <div class="feature-info">
                             <h3><a href="#">Instant Processing</a></h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                            <p>Get money across from any part of the world to E-Naira wallet.</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                         </div>
                         <div class="feature-info">
                             <h3><a href="#">Bank Lavel Security</a></h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                            <p>Information is encrypted and protected using industry-leading technology</p>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                             <h2>Download Our App</h2>
                             <p>In our dolore with people who are important to you, conversations that bring you to closer to each other and those who enjoy our dishes. Quisque pretium dolor turpis, quis blandit turpis semper ut. Nam malesuada eros nec luctus laoreet. Fusce sodales consequat velit eget dictum. Integer ornare magna.</p>
                         </div>
-                        <!-- <h5>Over 70 million Downloads Worldwide</h5> -->
+                        <h5>Coming soon...</h5>
                         <div class="app-btn-wrap">
                             <a href="#">
                                 <img src="/assets/img/about/play-store.png" alt="Image">
