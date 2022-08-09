@@ -1,401 +1,380 @@
 <template>
-    <!-- Breadcrumbs Start -->
-    <div class="rs-breadcrumbs img3">
-        <div class="breadcrumbs-inner text-center">
-            <h1 class="page-title">Services</h1>
-            <ul>
-                <li title="Braintech - IT Solutions and Technology Startup HTML Template">
-                    <a class="active" href="index.html">Home</a>
-                </li>
-                <li>Services</li>                       
-            </ul>
-        </div>
-    </div>
-    <!-- Breadcrumbs End -->
+    <section class="hero-wrap style2">
+        <div class="container">
+            <div class="hero-shape" data-speed="0.06" data-revert="true">
+                <img src="/assets/img/hero/hero-shape-4.png" alt="Image" class="hero-shape-one">
+                <img src="/assets/img/hero/hero-shape-5.png" alt="Image" class="hero-shape-two">
+                <img src="/assets/img/hero/hero-shape-6.png" alt="Image" class="hero-shape-three">
+            </div>
+            <div class="row align-items-center gx-5">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">SIMPLE, QUICK, SECURED</span>
+                        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Transfer Money Across The World to any E-Naira Wallet</h1>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">It is a long established fact that a reader will be distracted by the reale he point of using Lorem Ipsum is that it has a more-or-less normal valid equity.</p>
+                        <div class="hero-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                            <a href="contact/" class="btn style1">GET STARTED<i class="ri-arrow-right-s-line"></i></a>
+                            <a class="play-video" data-fancybox="" href="https://www.youtube.com/watch?v=oDDbVC3Hekc">
+                                <span class="play-now icon">
+                                    <i class="ri-play-fill"></i>
+                                </span>
+                                <span class="link-text">Watch Video</span>
+                            </a>
+                        </div>
 
-    <!-- Services Section Start -->
-    <div class="rs-services style2 pt-120 pb-120 md-pt-80 md-pb-80">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img-wrap">
+                        <!-- <div class="hero-promo-text bounce">
+                                <span><i class="flaticon-group"></i></span>
+                                <h6>20M+ <span>Active Users</span></h6>
+                            </div> -->
+                        <div class="hero-img-one">
+                            <img src="/assets/img/hero/hero-img-2.jpg" alt="Image">
+                        </div>
+                        <div class="hero-img-two">
+                            <img src="/assets/img/hero/hero-img-3.jpg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="feature-wrap style1 pt-100 pb-75 bg-whisper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-25">
-                   <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                               <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img src="assets/images/services/main-home/icons/1.png" alt=""> 
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a href="software-development.html">Software Development</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-front">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a href="software-development.html">Software Development</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">We denounce with righteous indignation and dislike men who are so beguiled and demo ralized your data.</p>
-                                    </div>
-                                    <div class="back-btn-part">
-                                        <a class="readon view-more" href="web-development.html">Get In Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div> 
-                </div>
-                <div class="col-lg-4 col-md-6 mb-25">
-                   <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                               <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img src="assets/images/services/main-home/icons/2.png" alt=""> 
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a href="web-development.html"> Web Development</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-front">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a href="web-development.html"> Web Development</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">We denounce with righteous indignation and dislike men who are so beguiled and demo ralized your data.</p>
-                                    </div>
-                                    <div class="back-btn-part">
-                                        <a class="readon view-more" href="web-development.html">Get In Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div> 
-                </div>
-                <div class="col-lg-4 col-md-6 mb-25">
-                   <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                               <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img src="assets/images/services/main-home/icons/3.png" alt=""> 
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a href="analytic-solutions.html">Analytic Solutions</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-front">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a href="analytic-solutions.html">Analytic Solutions</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">We denounce with righteous indignation and dislike men who are so beguiled and demo ralized your data.</p>
-                                    </div>
-                                    <div class="back-btn-part">
-                                        <a class="readon view-more" href="analytic-solutions.html">Get In Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div> 
-                </div>
-                <div class="col-lg-4 col-md-6 md-mb-25">
-                   <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                               <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img src="assets/images/services/main-home/icons/4.png" alt=""> 
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a href="cloud-and-devops.html">Cloud and DevOps</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-front">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a href="cloud-and-devops.html">Cloud and DevOps</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">We denounce with righteous indignation and dislike men who are so beguiled and demo ralized your data.</p>
-                                    </div>
-                                    <div class="back-btn-part">
-                                        <a class="readon view-more" href="cloud-and-devops.html">Get In Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div> 
-                </div>
-                <div class="col-lg-4 col-md-6 sm-mb-25">
-                   <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                               <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img src="assets/images/services/main-home/icons/5.png" alt=""> 
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a href="product-design.html">Product Design</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-front">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a href="product-design.html">Product Design</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">We denounce with righteous indignation and dislike men who are so beguiled and demo ralized your data.</p>
-                                    </div>
-                                    <div class="back-btn-part">
-                                        <a class="readon view-more" href="product-design.html">Get In Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div> 
-                </div>
-                <div class="col-lg-4 col-md-6">
-                   <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                               <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img src="assets/images/services/main-home/icons/6.png" alt=""> 
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a href="data-center.html">Data Center</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-front">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a href="data-center.html">Data Center</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">We denounce with righteous indignation and dislike men who are so beguiled and demo ralized your data.</p>
-                                    </div>
-                                    <div class="back-btn-part">
-                                        <a class="readon view-more" href="data-center.html">Get In Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div> 
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <div class="section-title style1 text-center mb-40">
+                        <span>YOUR BENIFITS</span>
+                        <h2>The Most Trusted way to send Money to E-Naira Wallets</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Services Section End -->
-
-    <!-- Process Section Start -->
-    <div class="rs-process style5 bg7 pt-120 pb-120 md-pt-80 md-pb-80">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <div class="process-wrap bg3">
-                        <div class="sec-title mb-30">
-                            <div class="sub-text new">Working Process</div>
-                            <h2 class="title white-color">
-                                Our Working Process -  How We Work For Our Customers
-                            </h2>
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="feature-card style4">
+                        <div class="feature-icon">
+                            <i class="flaticon-planet-earth"></i>
                         </div>
-                        <div class="btn-part mt-40">
-                            <a class="readon learn-more" href="contact.html">Contact Us</a>
+                        <div class="feature-info">
+                            <h3><a href="#">Global Coverage</a></h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 pl-30 md-pl-15 md-pt-50">
-                    <div class="row">
-                        <div class="col-md-6 mb-40">
-                            <div class="rs-addon-number">
-                                <div class="number-text">
-                                    <div class="number-area">
-                                        1.
-                                    </div>
-                                    <div class="number-title">
-                                        <h3 class="title"> Discovery</h3>
-                                    </div>
-                                    <p class="number-txt">  Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas.</p>
-                                </div>
-                            </div>
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="feature-card style4">
+                        <div class="feature-icon">
+                            <i class="flaticon-money-bag-1"></i>
                         </div>
-                        <div class="col-md-6 mb-40">
-                            <div class="rs-addon-number">
-                                <div class="number-text">
-                                    <div class="number-area">
-                                        2.
-                                    </div>
-                                    <div class="number-title">
-                                        <h3 class="title">Planning</h3>
-                                    </div>
-                                    <p class="number-txt">Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas.</p>
-                                </div>
-                            </div>
+                        <div class="feature-info">
+                            <h3><a href="#">Easy Transfer Method</a></h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
                         </div>
-                        <div class="col-md-6">
-                            <div class="rs-addon-number">
-                                <div class="number-text">
-                                    <div class="number-area">
-                                        3.
-                                    </div>
-                                    <div class="number-title">
-                                        <h3 class="title">Execute</h3>
-                                    </div>
-                                    <p class="number-txt">Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas.</p>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="feature-card style4">
+                        <div class="feature-icon">
+                            <i class="flaticon-notification"></i>
                         </div>
-                        <div class="col-md-6">
-                            <div class="rs-addon-number">
-                                <div class="number-text">
-                                    <div class="number-area">
-                                        4.
-                                    </div>
-                                    <div class="number-title">
-                                        <h3 class="title">Deliver</h3>
-                                    </div>
-                                    <p class="number-txt">Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas.</p>
-                                </div>
-                            </div>
+                        <div class="feature-info">
+                            <h3><a href="#">Global 24/7 Support</a></h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="feature-card style4">
+                        <div class="feature-icon">
+                            <i class="flaticon-money-1"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3><a href="#">Lowest Fee</a></h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="feature-card style4">
+                        <div class="feature-icon">
+                            <i class="flaticon-automation"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3><a href="#">Instant Processing</a></h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <div class="feature-card style4">
+                        <div class="feature-icon">
+                            <i class="flaticon-shield"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3><a href="#">Bank Lavel Security</a></h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, eius.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Process Section End -->
 
-    <!-- Video Section End -->
-    <div class="rs-video-wrap style3 pt-120 pb-120 md-pt-80 md-pb-80">
+    <section class="app-wrap ptb-100">
         <div class="container">
-            <div class="row margin-0 grdiant-bg align-items-center">
-                <div class="col-lg-6 padding-0">
-                    <div class="video-item">
-                        <div class="rs-videos">
-                            <div class="animate-border main-home style2">
-                                <a class="popup-border popup-videos" href="https://www.youtube.com/watch?v=YLN1Argi7ik">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                        </div> 
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="app-img-wrap">
+                        <img src="/assets/img/shape-4.png" alt="Image" class="app-shape-one bounce">
+                        <img src="/assets/img/app-screen.png" alt="Image">
                     </div>
                 </div>
-                <div class="col-lg-6 padding-0">
-                    <div class="rs-requset">
-                        <div class="sec-title2 mb-33">
-                            <span class="sub-text white-color">Let's Talk</span>
-                            <h2 class="title testi-title white-color">
-                               Request a Free Quote
-                            </h2>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="app-content">
+                        <div class="content-title style1">
+                            <span>OUR APP</span>
+                            <h2>Download Our App</h2>
+                            <p>In our dolore with people who are important to you, conversations that bring you to closer to each other and those who enjoy our dishes. Quisque pretium dolor turpis, quis blandit turpis semper ut. Nam malesuada eros nec luctus laoreet. Fusce sodales consequat velit eget dictum. Integer ornare magna.</p>
                         </div>
-                        <div id="form-messages"></div>
-                        <form id="contact-form" method="post" action="mailer.php">
-                            <fieldset>
-                                <div class="row">
-                                    <div class="col-lg-6 mb-25 col-md-6 col-sm-6">
-                                        <input class="from-control" type="text" id="name" name="name" placeholder="Name" required="">
-                                    </div> 
-                                    <div class="col-lg-6 mb-25 col-md-6 col-sm-6">
-                                        <input class="from-control" type="text" id="email" name="email" placeholder="E-Mail" required="">
-                                    </div>   
-                                    <div class="col-lg-6 mb-25 col-md-6 col-sm-6">
-                                        <input class="from-control" type="text" id="phone" name="phone" placeholder="Phone Number" required="">
-                                    </div>   
-                                    <div class="col-lg-6 mb-25 col-md-6 col-sm-6">
-                                        <input class="from-control" type="text" id="website" name="website" placeholder="Your Website" required="">
-                                    </div>
-                              
-                                    <div class="col-lg-12 mb-35">
-                                        <textarea class="from-control" id="message" name="message" placeholder="Your message Here" required=""></textarea>
-                                    </div>
-                                </div>
-                                <div class="btn-part">
-                                    <input class="readon learn-more submit" type="submit" value="Submit Now">
-                                </div> 
-                            </fieldset>
-                        </form> 
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </div>
-    <!-- Video Section End -->
-
-    <!-- Cta section start -->
-    <div class="rs-cta style1 bg7 pt-80 pb-70">
-        <div class="container">
-            <div class="cta-wrap">
-                <div class="row align-items-center">
-                    <div class="col-lg-9 col-md-12 md-mb-30">
-                        <span>Plan to Start a Project</span>
-                        <div class="title-wrap">
-                            <h2 class="epx-title">Our Experts Ready to Help You</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 text-right md-text-left col-md-12">
-                        <div class="button-wrap">
-                            <a class="readon learn-more" href="contact.html">Get In Touch</a>
+                        <!-- <h5>Over 70 million Downloads Worldwide</h5> -->
+                        <div class="app-btn-wrap">
+                            <a href="#">
+                                <img src="/assets/img/about/play-store.png" alt="Image">
+                            </a><a href="#">
+                                <img src="/assets/img/about/app-store.png" alt="Image">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Cta section end -->
+    </section>
+
+    <section class="currency-wrap pt-100 pb-75 bg-whisper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                    <div class="section-title style1 text-center mb-40">
+                        <span>CURRENCY PROFILE</span>
+                        <h2>Popular Currencies</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/usa.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>USD - US Dollar</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/eu.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>EUR - Euro</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/uk.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>GBP - British Pound</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/canada.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>CAD - Canadian Dollar</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/australia.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>AUD - Aus Dollar</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/japan.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>JPY - Japaneese Yen</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/india.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>INR - Indian Rupee</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/newzland.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>NZD - NZ Dollar</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="currency-card">
+                        <div class="currency-flag"><img src="/assets/img/flag/france.png" alt="Image"></div>
+                        <div class="currency-info">
+                            <h3>CHF - Swiss Franc</h3>
+                            <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-wrap d-none ptb-100">
+        <div class="container">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                <div class="section-title style1 text-center mb-40">
+                    <span>OUR REVIEWS</span>
+                    <h2>More Than 20,000+ Happy Customers Trust Our Services</h2>
+                </div>
+            </div>
+            <div class="testimonial-slider-two owl-carousel">
+                <div class="testimonial-card style3">
+                    <div class="client-info-area">
+                        <div class="client-info-wrap">
+                            <div class="client-img">
+                                <img src="/assets/img/testimonials/client-3.jpg" alt="Image">
+                            </div>
+                            <div class="client-info">
+                                <h3>Jim Morison</h3>
+                                <span>Director, BAT</span>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="flaticon-quotation-mark"></i>
+                        </div>
+                    </div>
+                    <p class="client-quote">Best Strategic planning dolor sit amet consectetur adicing elit. Scel erus isque ametus odio velit auctor nam elit nulla eget sodales dui pulvinar. Best strategic planning dolor sit sectetur.</p>
+                </div>
+                <div class="testimonial-card style3">
+                    <div class="client-info-area">
+                        <div class="client-info-wrap">
+                            <div class="client-img">
+                                <img src="/assets/img/testimonials/client-4.jpg" alt="Image">
+                            </div>
+                            <div class="client-info">
+                                <h3>Alex Cruis</h3>
+                                <span>CEO, IBAC</span>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="flaticon-quotation-mark"></i>
+                        </div>
+                    </div>
+                    <p class="client-quote">Best Strategic planning dolor sit amet consectetur adicing elit. Scel erus isque ametus odio velit auctor nam elit nulla eget sodales dui pulvinar. Best strategic planning dolor sit sectetur.</p>
+                </div>
+                <div class="testimonial-card style3">
+                    <div class="client-info-area">
+                        <div class="client-info-wrap">
+                            <div class="client-img">
+                                <img src="/assets/img/testimonials/client-5.jpg" alt="Image">
+                            </div>
+                            <div class="client-info">
+                                <h3>Tom Haris</h3>
+                                <span>Engineer, Olleo</span>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="flaticon-quotation-mark"></i>
+                        </div>
+                    </div>
+                    <p class="client-quote">Best Strategic planning dolor sit amet consectetur adicing elit. Scel erus isque ametus odio velit auctor nam elit nulla eget sodales dui pulvinar. Best strategic planning dolor sit sectetur.</p>
+                </div>
+                <div class="testimonial-card style3">
+                    <div class="client-info-area">
+                        <div class="client-info-wrap">
+                            <div class="client-img">
+                                <img src="/assets/img/testimonials/client-1.jpg" alt="Image">
+                            </div>
+                            <div class="client-info">
+                                <h3>Harry Jackson</h3>
+                                <span>Enterpreneur</span>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="flaticon-quotation-mark"></i>
+                        </div>
+                    </div>
+                    <p class="client-quote">Best Strategic planning dolor sit amet consectetur adicing elit. Scel erus isque ametus odio velit auctor nam elit nulla eget sodales dui pulvinar. Best strategic planning dolor sit sectetur.</p>
+                </div>
+                <div class="testimonial-card style3">
+                    <div class="client-info-area">
+                        <div class="client-info-wrap">
+                            <div class="client-img">
+                                <img src="/assets/img/testimonials/client-2.jpg" alt="Image">
+                            </div>
+                            <div class="client-info">
+                                <h3>Chris Haris</h3>
+                                <span>MD, ITec</span>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="flaticon-quotation-mark"></i>
+                        </div>
+                    </div>
+                    <p class="client-quote">Best Strategic planning dolor sit amet consectetur adicing elit. Scel erus isque ametus odio velit auctor nam elit nulla eget sodales dui pulvinar. Best strategic planning dolor sit sectetur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <route lang="yaml">
-meta:
+    meta:
     layout: default
+    middleware: []
+    requiresAuth: true
 </route>
+
+<script>
+import { useMeta } from 'vue-meta'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
+export default {
+    setup() {
+        useMeta({
+            title: 'Home',
+        })
+        return {}
+    },
+    data() {
+        return {}
+    },
+    computed: {},
+    mounted() {},
+    methods: {}
+}
+
+</script>
+<style>
+</style>
