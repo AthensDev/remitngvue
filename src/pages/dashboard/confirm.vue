@@ -100,7 +100,17 @@
                     let status = this.$route.query.status
                     let tx_ref = this.$route.query.tx_ref
                     let transaction_id = this.$route.query.transaction_id
-                    this.verifyFlutterwave({status, tx_ref, transaction_id})
+
+                     let data =   {
+                          event: "transfer.completed",
+                          event_type: "Transfer",
+                          data: {
+                                id: Number(this.$route.query.transaction_id),
+                                tx_ref: this.$route.query.tx_ref,
+                                status: this.$route.query.status,
+                            }
+                        }
+                    this.verifyFlutterwave(data)
                // }
             }
 

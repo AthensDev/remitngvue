@@ -167,8 +167,8 @@
                   payment_options: "card, banktransfer, ussd",
                   redirect_url: "https://remitngapp.netlify.app/dashboard/confirm",
                   meta: {
-                    consumer_id: 23,
-                    consumer_mac: "92a3-912ba-1192a",
+                    customer_email: this.user.email,
+                    beneficiary_wallet: this.wallet,
                   },
                   customer: {
                     email: this.user.email ?? "rose@unsinkableship.com",
