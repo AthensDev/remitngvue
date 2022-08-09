@@ -12,7 +12,7 @@ import {isAuth, isGuest} from './middlewares/auth'
 import middlewarePipeline from './middlewares/pipeline'
 import Notifications from './plugins/notiwind/index.esm'
 
-import Flutterwave from  'flutterwave-vue-v3'
+// import Flutterwave from  'flutterwave-vue-v3'
 
 
 
@@ -27,7 +27,7 @@ const router = createRouter({
     linkActiveClass: "active"
 })
 
-const app = createApp(App).use(router).use(Flutterwave, { publicKey: config.FLWPUBK }).use(store).use(createMetaManager())
+const app = createApp(App).use(router).use(store).use(createMetaManager())
 
 // add config to vue instance - this.$config
 app.config.globalProperties.$config = config
