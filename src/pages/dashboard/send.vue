@@ -57,19 +57,19 @@
                 </ul>
 
                 <div class="convert-tabcontent">
-                    <form action="#" class="convert-form">
+                    <form  class="convert-form" @submit.prevent="makePayment()">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label for="country_from">E-naira Wallet Address</label>
-                                    <input type="text" name="">
+                                    <input v-model="wallet" type="text" name="">
                                 </div>
                             </div>
 
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="country_from">Amount</label>
-                                    <input type="text" name="">
+                                    <input v-model="amount" type="number" name="">
                                 </div>
                             </div>
                             <div class="col-lg-1 text-center">
@@ -80,11 +80,12 @@
                             <div class="col-lg-5">
                                 <div class="form-group">
                                     <label for="currency_to">Currency</label>
-                                    <select name="country_to" id="country_to">
-                                        <option value="1">EUR - Euro</option>
-                                        <option value="2">USD - US Dollar</option>
-                                        <option value="3">CAD - Canadian Dollar</option>
-                                        <option value="3">GHS - Ghana Cedis</option>
+                                    <select v-model="currency" name="country_to" id="country_to">
+                                        <option value="EUR">EUR - Euro</option>
+                                        <option value="USD">USD - US Dollar</option>
+                                        <option value="CAD">CAD - Canadian Dollar</option>
+                                        <option value="GHS">GHS - Ghana Cedis</option>
+                                        <option value="NGN">NGN - Nigeria Naira</option>
                                     </select>
                                 </div>
                             </div>
@@ -97,7 +98,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-4 text-lg-end">
-                                <a class="btn style1">Send<i class="ri-arrow-right-s-line"></i></a>
+                                <button class="btn style1">Send<i class="ri-arrow-right-s-line"></i></button>
                             </div>
                         </div>
                     </form>
@@ -115,3 +116,99 @@
         middleware: []
         requiresAuth: true
 </route>
+
+<script>
+    import { useMeta } from 'vue-meta'
+    import { computed, ref } from 'vue'
+    import { useRouter } from 'vue-router'
+    import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
+    export default {
+        setup() {
+            useMeta({
+                title: 'Home',
+            })
+            const router = useRouter()
+            return {
+                router
+            }
+        },
+        data() {
+            return {
+                amount: '',
+                wallet: '',
+                currency: 'GHS'
+            }
+        },
+        computed: {
+            ...mapGetters("user", ["user"]),
+        },
+        mounted() {
+            // function makePayment() {
+            //     FlutterwaveCheckout({
+            //       public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+            //       tx_ref: "titanic-48981487343MDI0NzMx",
+            //       amount: 54600,
+            //       currency: "NGN",
+            //       payment_options: "card, banktransfer, ussd",
+            //       redirect_url: "https://glaciers.titanic.com/handle-flutterwave-payment",
+            //       meta: {
+            //         consumer_id: 23,
+            //         consumer_mac: "92a3-912ba-1192a",
+            //       },
+            //       customer: {
+            //         email: "rose@unsinkableship.com",
+            //         phone_number: "08102909304",
+            //         name: "Rose DeWitt Bukater",
+            //       },
+            //       customizations: {
+            //         title: "The Titanic Store",
+            //         description: "Payment for an awesome cruise",
+            //         logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
+            //       },
+            //     });
+            // }
+
+
+        },
+        methods: {
+            ...mapActions('auth', ['login', 'logout']),
+            async postLogin(){
+
+                this.logout();
+                await this.login(this.user)
+                .then((res) =>{
+                    // this.router.push('dashboard')
+                    window.location = '/dashboard'
+                })
+
+            },
+
+           makePayment() {
+                FlutterwaveCheckout({
+                  public_key: this.$config.FLWPUBK,
+                  tx_ref: "titanic-48981487343MDI0NzMx",
+                  amount: this.amount,
+                  currency: this.currency,
+                  payment_options: "card, banktransfer, ussd",
+                  redirect_url: "https://remitngapp.netlify.app/dashboard",
+                  meta: {
+                    consumer_id: 23,
+                    consumer_mac: "92a3-912ba-1192a",
+                  },
+                  customer: {
+                    email: this.user.email ?? "rose@unsinkableship.com",
+                    phone_number: "08102909304",
+                    name: this.user.first_name + this.user.last_name ?? "Rose DeWitt Bukater",
+                  },
+                  customizations: {
+                    title: "RemitNG",
+                    description: "Payment for seamless transfer",
+                    logo: "https://remitngapp.netlify.app/assets/img/logo.png",
+                  },
+                });
+            }
+
+        }
+    }
+
+</script>

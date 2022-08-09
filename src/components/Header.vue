@@ -80,7 +80,10 @@ export default {
     data() {
         return {}
     },
-
+    
+    computed: {
+        ...mapGetters("user", ["user"]),
+    },
     created() {},
     mounted() {},
 };

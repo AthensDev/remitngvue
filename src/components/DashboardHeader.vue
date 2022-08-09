@@ -42,7 +42,7 @@
                                 
                                 <div class="option-item">
                                     <router-link :to="{name: 'login'}"  class="nav-link btn style1">
-                                        My Profile<i class="ri-arrow-right-s-line"></i>
+                                        {{ user.first_name }}<i class="ri-arrow-right-s-line"></i>
                                     </router-link>
                                 </div>
                             </div>
@@ -99,9 +99,13 @@ export default {
     data() {
         return {}
     },
-
+    computed: {
+        ...mapGetters("user", ["user"]),
+    },
     created() {},
-    mounted() {},
+    mounted() {
+        console.log(this.user)
+    },
 };
 
 </script>

@@ -118,42 +118,42 @@
 </route>
 
 <script>
-import { useMeta } from 'vue-meta'
-import { computed, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
-export default {
-    setup() {
-        useMeta({
-            title: 'Home',
-        })
-        const router = useRouter()
-        return {
-            router
-        }
-    },
-    data() {
-        return {
-            user:{
+    import { useMeta } from 'vue-meta'
+    import { computed, ref } from 'vue'
+    import { useRouter } from 'vue-router'
+    import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
+    export default {
+        setup() {
+            useMeta({
+                title: 'Home',
+            })
+            const router = useRouter()
+            return {
+                router
+            }
+        },
+        data() {
+            return {
+                user:{
+
+                }
+            }
+        },
+        computed: {},
+        mounted() {},
+        methods: {
+            ...mapActions('auth', ['login', 'logout']),
+            async postLogin(){
+
+                this.logout();
+                await this.login(this.user)
+                .then((res) =>{
+                    // this.router.push('dashboard')
+                    window.location = '/dashboard'
+                })
 
             }
         }
-    },
-    computed: {},
-    mounted() {},
-    methods: {
-        ...mapActions('auth', ['login', 'logout']),
-        async postLogin(){
-
-            this.logout();
-            await this.login(this.user)
-            .then((res) =>{
-                // this.router.push('dashboard')
-                window.location = '/dashboard'
-            })
-
-        }
     }
-}
 
 </script>
