@@ -10,7 +10,7 @@
         <aside class="col-md-3  md-none">
             <div class="contact-us-wrap">
                 <div class="">
-                    <router-link class="contact-item" :to="{name: 'dashboard'}" style="border: thin solid gray;">
+                    <router-link class="contact-item" :to="{name: 'dashboard'}">
                         <span class="contact-icon">
                             <i class="ri-mail-send-line"></i>
                         </span>
@@ -18,10 +18,9 @@
                             <h3>Dashboard</h3>
                         </div>
                     </router-link>
-
                 </div>
                 <div class="">
-                    <router-link class="contact-item" :to="{name: 'dashboard-send'}">
+                    <router-link class="contact-item" :to="{name: 'dashboard-send'}" style="border: thin solid gray;">
                         <span class="contact-icon">
                             <i class="ri-mail-send-line"></i>
                         </span>
@@ -116,44 +115,3 @@
         middleware: []
         requiresAuth: true
 </route>
-
-<script>
-import { useMeta } from 'vue-meta'
-import { computed, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
-export default {
-    setup() {
-        useMeta({
-            title: 'Home',
-        })
-        const router = useRouter()
-        return {
-            router
-        }
-    },
-    data() {
-        return {
-            user:{
-
-            }
-        }
-    },
-    computed: {},
-    mounted() {},
-    methods: {
-        ...mapActions('auth', ['login', 'logout']),
-        async postLogin(){
-
-            this.logout();
-            await this.login(this.user)
-            .then((res) =>{
-                // this.router.push('dashboard')
-                window.location = '/dashboard'
-            })
-
-        }
-    }
-}
-
-</script>
