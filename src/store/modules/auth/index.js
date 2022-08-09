@@ -1,4 +1,5 @@
 import auth from '~/repository/auth'
+import transaction from '~/repository/transaction'
 const state = () => ({
     isLogged: false,
     token: '',
@@ -25,16 +26,18 @@ const actions = {
 
     },
 
-     async register({ commit, dispatch }, data) {
-        let res = await auth.register(data)
-        console.log(res.data.data)
-        
+    async register({ commit, dispatch }, data) {
+        let res = await auth.register(data)        
         if (res.data.data.auth_token && res.data.status === 201) {
             commit('setToken', res.data.data.auth_token)
             dispatch('user/setUser', {...res.data.data.customer} , { root:true })
             commit('setIsLogged', true)
             return res.data.data
         }
+    },
+
+    async verifyFlutterwave({ commit, dispatch }, data) {
+        let res = await transaction.verify(data)
     },
 
     logout({ commit, dispatch }, data) {
