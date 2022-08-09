@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row pt-100 pb-75">
                 <div class="col-md-4">
-                    <div class="footer-widget"><a href="index/" class="footer-logo"><img src="assets/img/logo-white.png" style="height:50px;" alt="Image"></a>
+                    <div class="footer-widget"><a href="index/" class="footer-logo"><img src="/assets/img/logo-white.png" style="height:50px;" alt="Image"></a>
                         <p class="comp-desc"> Lorem ipsum dolor sit amet consc tetur adicing elit. Dolor emque dicta molest enim beatae ame consequ atur tempo pretium auctor nam. </p>
                         <ul class="social-profile style1 list-style">
                             <li><a target="_blank" href="https://facebook.com/"><i class="ri-facebook-fill"></i></a></li>
