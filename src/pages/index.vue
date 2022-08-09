@@ -2,9 +2,9 @@
     <section class="hero-wrap style2">
         <div class="container">
             <div class="hero-shape" data-speed="0.06" data-revert="true">
-                <img src="assets/img/hero/hero-shape-4.png" alt="Image" class="hero-shape-one">
-                <img src="assets/img/hero/hero-shape-5.png" alt="Image" class="hero-shape-two">
-                <img src="assets/img/hero/hero-shape-6.png" alt="Image" class="hero-shape-three">
+                <img src="/assets/img/hero/hero-shape-4.png" alt="Image" class="hero-shape-one">
+                <img src="/assets/img/hero/hero-shape-5.png" alt="Image" class="hero-shape-two">
+                <img src="/assets/img/hero/hero-shape-6.png" alt="Image" class="hero-shape-three">
             </div>
             <div class="row align-items-center gx-5">
                 <div class="col-lg-6">
@@ -31,10 +31,10 @@
                                 <h6>20M+ <span>Active Users</span></h6>
                             </div> -->
                         <div class="hero-img-one">
-                            <img src="assets/img/hero/hero-img-2.jpg" alt="Image">
+                            <img src="/assets/img/hero/hero-img-2.jpg" alt="Image">
                         </div>
                         <div class="hero-img-two">
-                            <img src="assets/img/hero/hero-img-3.jpg" alt="Image">
+                            <img src="/assets/img/hero/hero-img-3.jpg" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -128,8 +128,8 @@
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     <div class="app-img-wrap">
-                        <img src="assets/img/shape-4.png" alt="Image" class="app-shape-one bounce">
-                        <img src="assets/img/app-screen.png" alt="Image">
+                        <img src="/assets/img/shape-4.png" alt="Image" class="app-shape-one bounce">
+                        <img src="/assets/img/app-screen.png" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
@@ -142,9 +142,9 @@
                         <!-- <h5>Over 70 million Downloads Worldwide</h5> -->
                         <div class="app-btn-wrap">
                             <a href="#">
-                                <img src="assets/img/about/play-store.png" alt="Image">
+                                <img src="/assets/img/about/play-store.png" alt="Image">
                             </a><a href="#">
-                                <img src="assets/img/about/app-store.png" alt="Image">
+                                <img src="/assets/img/about/app-store.png" alt="Image">
                             </a>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/usa.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/usa.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>USD - US Dollar</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -175,7 +175,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/eu.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/eu.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>EUR - Euro</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -184,7 +184,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/uk.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/uk.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>GBP - British Pound</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -193,7 +193,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/canada.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/canada.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>CAD - Canadian Dollar</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -202,7 +202,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/australia.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/australia.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>AUD - Aus Dollar</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -211,7 +211,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/japan.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/japan.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>JPY - Japaneese Yen</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -220,7 +220,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/india.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/india.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>INR - Indian Rupee</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/newzland.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/newzland.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>NZD - NZ Dollar</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -238,7 +238,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6">
                     <div class="currency-card">
-                        <div class="currency-flag"><img src="assets/img/flag/france.png" alt="Image"></div>
+                        <div class="currency-flag"><img src="/assets/img/flag/france.png" alt="Image"></div>
                         <div class="currency-info">
                             <h3>CHF - Swiss Franc</h3>
                             <p>Adipiscing eliId nque diraam nim etrous porta vierra dolore.</p>
@@ -262,7 +262,7 @@
                     <div class="client-info-area">
                         <div class="client-info-wrap">
                             <div class="client-img">
-                                <img src="assets/img/testimonials/client-3.jpg" alt="Image">
+                                <img src="/assets/img/testimonials/client-3.jpg" alt="Image">
                             </div>
                             <div class="client-info">
                                 <h3>Jim Morison</h3>
@@ -279,7 +279,7 @@
                     <div class="client-info-area">
                         <div class="client-info-wrap">
                             <div class="client-img">
-                                <img src="assets/img/testimonials/client-4.jpg" alt="Image">
+                                <img src="/assets/img/testimonials/client-4.jpg" alt="Image">
                             </div>
                             <div class="client-info">
                                 <h3>Alex Cruis</h3>
@@ -296,7 +296,7 @@
                     <div class="client-info-area">
                         <div class="client-info-wrap">
                             <div class="client-img">
-                                <img src="assets/img/testimonials/client-5.jpg" alt="Image">
+                                <img src="/assets/img/testimonials/client-5.jpg" alt="Image">
                             </div>
                             <div class="client-info">
                                 <h3>Tom Haris</h3>
@@ -313,7 +313,7 @@
                     <div class="client-info-area">
                         <div class="client-info-wrap">
                             <div class="client-img">
-                                <img src="assets/img/testimonials/client-1.jpg" alt="Image">
+                                <img src="/assets/img/testimonials/client-1.jpg" alt="Image">
                             </div>
                             <div class="client-info">
                                 <h3>Harry Jackson</h3>
@@ -330,7 +330,7 @@
                     <div class="client-info-area">
                         <div class="client-info-wrap">
                             <div class="client-img">
-                                <img src="assets/img/testimonials/client-2.jpg" alt="Image">
+                                <img src="/assets/img/testimonials/client-2.jpg" alt="Image">
                             </div>
                             <div class="client-info">
                                 <h3>Chris Haris</h3>
