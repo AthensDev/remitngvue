@@ -16,8 +16,8 @@
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
                     <div class="faq-img">
-                        <img src="assets/img/about/faq-shape-1.png" alt="Image" class="faq-shape-one ">
-                        <img src="assets/img/about/faq-img-1.png" alt="Image" class="moveHorizontal">
+                        <img src="/assets/img/about/faq-shape-1.png" alt="Image" class="faq-shape-one ">
+                        <img src="/assets/img/about/faq-img-1.png" alt="Image" class="moveHorizontal">
                     </div>
                 </div>
                 <div class="col-lg-6">
