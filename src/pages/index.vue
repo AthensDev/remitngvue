@@ -11,7 +11,7 @@
                     <div class="hero-content">
                         <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">SIMPLE, QUICK, SECURED</span>
                         <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Transfer Money Across The World to any E-Naira Wallet</h1>
-                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">It is a long established fact that a reader will be distracted by the reale he point of using Lorem Ipsum is that it has a more-or-less normal valid equity.</p>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quis veritatis repellat, quibusdam obcaecati eos, aut ratione alias. Possimus corporis aliquid omnis nam ab quaerat minus modi distinctio facilis fugit.</p>
                         <div class="hero-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                             <a href="contact/" class="btn style1">GET STARTED<i class="ri-arrow-right-s-line"></i></a>
                             <a class="play-video" data-fancybox="" href="https://www.youtube.com/watch?v=oDDbVC3Hekc">
