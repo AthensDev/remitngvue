@@ -7,7 +7,7 @@
 
     <div class="container row ptb-100">
 
-       <Sidebar />
+        <Sidebar />
 
         <section class="col-md-9">
             <div class="convert-box">
@@ -15,7 +15,7 @@
                     <li style="width: 33%" class="nav-item">
                         <a class="active" href="/?step=1"><i class="ri-exchange-dollar-line"></i>Send Money</a>
                     </li>
-                  <!--   <li style="width: 33%" class="nav-item">
+                    <!--   <li style="width: 33%" class="nav-item">
                         <a href="/?step=2"><i class="ri-send-plane-line"></i>Confirm</a>
                     </li> -->
                     <!-- <li style="width: 33%" class="nav-item">
@@ -24,7 +24,7 @@
                 </ul>
 
                 <div class="convert-tabcontent">
-                    <form  class="convert-form" @submit.prevent="makePayment()">
+                    <form class="convert-form" @submit.prevent="makePayment()">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
@@ -88,88 +88,67 @@
     import { useMeta } from 'vue-meta'
     import { computed, ref } from 'vue'
     import { useRouter } from 'vue-router'
-    import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
-import Sidebar from '../../components/Sidebar.vue';
+    import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex"
+    
+
     export default {
-    setup() {
-        useMeta({
-            title: "Home",
-        });
-        const router = useRouter();
-        return {
-            router
-        };
-    },
-    data() {
-        return {
-            amount: "",
-            wallet: "",
-            currency: "USD"
-        };
-    },
-    computed: {
-        ...mapGetters("user", ["user"]),
-    },
-    mounted() {
-        // console.log(this.$route.query)
-    },
-    methods: {
-        ...mapActions("auth", ["login", "logout"]),
-        async postLogin() {
-            this.logout();
-            await this.login(this.user)
-                .then((res) => {
-                // this.router.push('dashboard')
-                window.location = "/dashboard";
-            });
+        setup() {
+            useMeta({
+                title: 'Home',
+            })
+            const router = useRouter()
+            return {
+                router
+            }
         },
-<<<<<<< HEAD
-        mounted() {
-          // console.log(this.$route.query)
+        data() {
+            return {
+                amount: "",
+                wallet: "",
+                currency: "USD"
+            };
         },
+        computed: {},
+        mounted() {},
         methods: {
             ...mapActions('auth', ['login', 'logout']),
-            async postLogin(){
 
-                this.logout();
-                await this.login(this.user)
-                .then((res) =>{
-                    // this.router.push('dashboard')
-                    window.location = '/dashboard'
-                })
-
+            generateReference() {
+                let date = new Date();
+                return date.getTime().toString();
             },
+
 
             makePayment() {
                 FlutterwaveCheckout({
-                  public_key: this.$config.FLWPUBK,
-                  tx_ref: this.generateReference(),
-                  amount: this.amount,
-                  currency: this.currency,
-                  payment_options: "card, banktransfer, ussd",
-                  redirect_url: "https://remitng.netlify.app/dashboard/confirm",
-                  meta: {
-                    customer_email: this.user.email,
-                    beneficiary_wallet: this.wallet,
-                },
-                customer: {
-                    email: this.user.email ?? "rose@unsinkableship.com",
-                    phone_number: "08102909304",
-                    name: this.user.first_name + this.user.last_name ?? "Rose DeWitt Bukater",
-                },
-                customizations: {
-                    title: "RemitNG",
-                    description: "Payment for seamless transfer",
-                    logo: "https://remitngapp.netlify.app/assets/img/logo.png",
-                },
-            });
-        },
-        generateReference() {
-            let date = new Date();
-            return date.getTime().toString();
-        },
-    },
-    components: { Sidebar }
-}
+                    public_key: this.$config.FLWPUBK,
+                    tx_ref: this.generateReference(),
+                    amount: this.amount,
+                    currency: this.currency,
+                    payment_options: "card, banktransfer, ussd",
+                    redirect_url: "https://remitng.netlify.app/dashboard/confirm",
+                    meta: {
+                        customer_email: this.user.email,
+                        beneficiary_wallet: this.wallet,
+                    },
+                    customer: {
+                        email: this.user.email ?? "rose@unsinkableship.com",
+                        phone_number: "08102909304",
+                        name: this.user.first_name + this.user.last_name ?? "Rose DeWitt Bukater",
+                    },
+                    customizations: {
+                        title: "RemitNG",
+                        description: "Payment for seamless transfer",
+                        logo: "https://remitngapp.netlify.app/assets/img/logo.png",
+                    },
+                });
+            },
+            
+        }
+    }
+
+
 
 </script>
+
+
