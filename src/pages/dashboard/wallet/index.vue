@@ -96,9 +96,9 @@
 
 <route lang="yaml">
     meta:
-    layout: user
-    middleware: []
-    requiresAuth: true
+        layout: user
+        middleware: []
+        requiresAuth: true
 </route>
 
 <script>
