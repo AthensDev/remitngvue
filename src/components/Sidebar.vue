@@ -1,80 +1,42 @@
 <template>
-    <aside class="menu-bar menu-sticky">
-        <div class="menu-items sidebar-bg" id="style-4-scrollbar">
+    <aside class="col-md-3  md-none">
+            <div class="contact-us-wrap">
+                <div class="">
+                    <router-link class="contact-item dashboard-tabs" 
+                        :class="currentPath == '/dashboard'&&'active-tab'" 
+                        :to="{name: 'dashboard'}" style=""
+                    >
+                        <span class="contact-icon">
+                            <i class="ri-dashboard-line"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>Dashboard</h3>
+                        </div>
+                    </router-link>
 
-            <router-link   :to="{name: 'monitor'}" class="link" :class=" checkRoute('monitor') ? 'active' : '' " >
-                <span class="icon la la-laptop"></span>
-                <span class="title">Monitor</span>
-            </router-link>
-            
-            <router-link :to="{name: 'analytics'}" class="link" :class=" checkRoute('analytics') ? 'active' : '' " >
-                <span class="icon la la-file-alt"></span>
-                <span class="title">Analytics</span>
-            </router-link>
-
-            
-            <router-link :to="{name: 'devices'}"  class="link" :class=" checkRoute('devices') ? 'active' : '' "  data-target="devices" data-toggle="tooltip-menu" data-tippy-content="Devices">
-                <span class="icon la la-book-open"></span>
-                <span class="title">Devices</span>
-            </router-link>
-
-            <router-link :to="{name: 'stations'}"  class="link" :class=" checkRoute('stations') ? 'active' : '' ">
-                <span class="icon la la-book-open"></span>
-                <span class="title">Stations</span>
-            </router-link>
-
-            
-             <router-link :to="{name: 'configuration'}" class="link" :class=" checkRoute('configuration') ? 'active' : '' " data-target="config" data-toggle="tooltip-menu" data-tippy-content="Configuration">
-                <span class=" disabled icon la la-file-alt"></span>
-                <span class="title">Configuration</span>
-            </router-link>
-
-
-            
-            <!-- <router-link  class="link" :to="{name: 'maintain'}" >
-                <span class="icon la la-file"></span>
-                <span class="title">Maintain</span>
-            </router-link> -->
-
-            
-        </div>
-
-        <!-- Projects -->
-        <div class="menu-detail" ref="menui" data-menu="config" style="width:200px; overflow-y: hidden;">
-            <div class="menu-detail-wrapper">
-                <p class="uppercase my-6">Configuration</p>
-                
-                <a @click.prevent="closeMenu" href="#"><span class="la la-list"></span>Users</a>
+                </div>
+                <div class="">
+                    <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/send'&&'active-tab'"  :to="{name: 'dashboard-send'}">
+                        <span class="contact-icon">
+                            <i class="ri-exchange-line"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>Send Money</h3>
+                        </div>
+                    </router-link>
+                </div>
+                <div class="">
+                    <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/history'&&'active-tab'" :to="{name: 'dashboard'}">
+                        <span class="contact-icon">
+                            <i class="ri-history-fill"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>History</h3>
+                        </div>
+                    </router-link>
+                </div>
             </div>
-        </div>
-
-        <!-- Devices Submenu -->
-        <div class="menu-detail" ref="menui" data-menu="devices" style="width:200px; overflow-y: hidden;">
-            <div class="menu-detail-wrapper">
-                <p class="uppercase my-6">Devices</p>
-                <router-link :to="{name: 'devices'}"  @click.prevent="closeMenu" href="#"><span class="la la-list"></span>Devices</router-link>
-                <router-link :to="{name: 'devices-types'}"  @click.prevent="closeMenu" href="#"><span class="la la-list"></span>Device Types</router-link>
-            </div>
-        </div>
-
-
-        <!-- Data Sub Menu -->
-        <div class="menu-detail" data-menu="data">
-            <div class="menu-detail-wrapper">
-                <h6 class="uppercase">Data</h6>
-                <a href="#" @click.prevent="router.push({name: 'data'})">
-                    <span class="la la-user"></span>Chart</a>
-                <a href="#"><span class="la la-user-lock"></span>Energy</a>
-                <a href="" @click.prevent="router.push({name: 'data'})"><span class="la la-user-plus"></span>History Data</a>
-                <a href="#"><span class="la la-list"></span>Local Data</a>
-                <a href="#"><span class="la la-list"></span>History Event</a>
-                <a href="#"><span class="la la-list"></span>High Priority</a>
-            </div>
-        </div>
-
-
-
-    </aside>
+        </aside>
 </template>
 <script>
     import { useRouter } from 'vue-router'
@@ -83,8 +45,11 @@
     export default {
         setup(){
             const router = useRouter();
+            const currentPath = router.currentRoute.value.fullPath
+            console.log(currentPath)
             return{
-
+                router,
+                currentPath
             }
         },
         methods: {
@@ -126,4 +91,23 @@
     .menu-bar .menu-items .link.active:before {
         background-color: #ff7e00;
     }
+    .dashboard-tabs {
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+         border: 2px solid transparent;
+    }
+    .dashboard-tabs h3 {
+        margin: 0 !important;
+    }
+    .dashboard-tabs span {
+        top: 0 !important;
+    }
+    .theme-light .active-tab {
+        border: 2px solid black;
+    }
+    .theme-dark .active-tab {
+        border: 2px solid white;
+    }
+
 </style>

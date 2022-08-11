@@ -7,40 +7,7 @@
 
     <div class="container row ptb-100">
 
-        <aside class="col-md-3  md-none">
-            <div class="contact-us-wrap">
-                <div class="">
-                    <router-link class="contact-item" :to="{name: 'dashboard'}">
-                        <span class="contact-icon">
-                            <i class="ri-mail-send-line"></i>
-                        </span>
-                        <div class="contact-info" style="margin: auto">
-                            <h3>Dashboard</h3>
-                        </div>
-                    </router-link>
-                </div>
-                <div class="">
-                    <router-link class="contact-item" :to="{name: 'dashboard-send'}" style="border: thin solid gray;">
-                        <span class="contact-icon">
-                            <i class="ri-mail-send-line"></i>
-                        </span>
-                        <div class="contact-info" style="margin: auto">
-                            <h3>Send Money</h3>
-                        </div>
-                    </router-link>
-                </div>
-                <div class="">
-                    <router-link class="contact-item" :to="{name: 'dashboard'}">
-                        <span class="contact-icon">
-                            <i class="ri-mail-send-line"></i>
-                        </span>
-                        <div class="contact-info" style="margin: auto">
-                            <h3>History</h3>
-                        </div>
-                    </router-link>
-                </div>
-            </div>
-        </aside>
+       <Sidebar />
 
         <section class="col-md-9">
             <div class="convert-box">
@@ -94,7 +61,7 @@
                             <div class="col-xl-6 col-lg-8">
                                 <div class="converter-alert-text">
                                     <i class="ri-error-warning-line"></i>
-                                    <p>We use mid-market rate for our converter. This is for international purpose only. You won't recieve this rate when send money. <a href="chart.html" class="link style1">Check send rates</a></p>
+                                    <p class="text-sm">We use mid-market rate for our converter. This is for international purpose only. You won't recieve this rate when send money. <a href="chart.html" class="link style1">Check send rates</a></p>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-4 text-lg-end">
@@ -122,73 +89,70 @@
     import { computed, ref } from 'vue'
     import { useRouter } from 'vue-router'
     import { mapActions, useStore, mapGetters, mapState, mapMutations } from "vuex";
+import Sidebar from '../../components/Sidebar.vue';
     export default {
-        setup() {
-            useMeta({
-                title: 'Home',
-            })
-            const router = useRouter()
-            return {
-                router
-            }
+    setup() {
+        useMeta({
+            title: "Home",
+        });
+        const router = useRouter();
+        return {
+            router
+        };
+    },
+    data() {
+        return {
+            amount: "",
+            wallet: "",
+            currency: "USD"
+        };
+    },
+    computed: {
+        ...mapGetters("user", ["user"]),
+    },
+    mounted() {
+        // console.log(this.$route.query)
+    },
+    methods: {
+        ...mapActions("auth", ["login", "logout"]),
+        async postLogin() {
+            this.logout();
+            await this.login(this.user)
+                .then((res) => {
+                // this.router.push('dashboard')
+                window.location = "/dashboard";
+            });
         },
-        data() {
-            return {
-                amount: '',
-                wallet: '',
-                currency: 'USD'
-            }
-        },
-        computed: {
-            ...mapGetters("user", ["user"]),
-        },
-        mounted() {
-          // console.log(this.$route.query)
-        },
-        methods: {
-            ...mapActions('auth', ['login', 'logout']),
-            async postLogin(){
-
-                this.logout();
-                await this.login(this.user)
-                .then((res) =>{
-                    // this.router.push('dashboard')
-                    window.location = '/dashboard'
-                })
-
-            },
-
-            makePayment() {
-                FlutterwaveCheckout({
-                  public_key: this.$config.FLWPUBK,
-                  tx_ref: this.generateReference(),
-                  amount: this.amount,
-                  currency: this.currency,
-                  payment_options: "card, banktransfer, ussd",
-                  redirect_url: "https://remitngapp.netlify.app/dashboard/confirm",
-                  meta: {
+        makePayment() {
+            FlutterwaveCheckout({
+                public_key: this.$config.FLWPUBK,
+                tx_ref: this.generateReference(),
+                amount: this.amount,
+                currency: this.currency,
+                payment_options: "card, banktransfer, ussd",
+                redirect_url: "https://remitngapp.netlify.app/dashboard/confirm",
+                meta: {
                     customer_email: this.user.email,
                     beneficiary_wallet: this.wallet,
-                  },
-                  customer: {
+                },
+                customer: {
                     email: this.user.email ?? "rose@unsinkableship.com",
                     phone_number: "08102909304",
                     name: this.user.first_name + this.user.last_name ?? "Rose DeWitt Bukater",
-                  },
-                  customizations: {
+                },
+                customizations: {
                     title: "RemitNG",
                     description: "Payment for seamless transfer",
                     logo: "https://remitngapp.netlify.app/assets/img/logo.png",
-                  },
-                });
-            },
-
-            generateReference() {
-                let date = new Date()
-                return date.getTime().toString();
-            },
-
-        }
-    }
+                },
+            });
+        },
+        generateReference() {
+            let date = new Date();
+            return date.getTime().toString();
+        },
+    },
+    components: { Sidebar }
+}
 
 </script>
