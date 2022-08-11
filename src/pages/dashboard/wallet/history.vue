@@ -6,7 +6,43 @@
     </div>
 
     <div class="container row ptb-100">
-        <Sidebar />
+
+        <aside class="col-md-3  md-none">
+            <div class="contact-us-wrap">
+                <div class="">
+                    <router-link class="contact-item" :to="{name: 'dashboard'}" style="border: thin solid gray;">
+                        <span class="contact-icon">
+                            <i class="ri-mail-send-line"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>Dashboard</h3>
+                        </div>
+                    </router-link>
+
+                </div>
+                <div class="">
+                    <router-link class="contact-item" :to="{name: 'dashboard-send'}">
+                        <span class="contact-icon">
+                            <i class="ri-mail-send-line"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>Send Money</h3>
+                        </div>
+                    </router-link>
+                </div>
+                <div class="">
+                    <router-link class="contact-item" :to="{name: 'dashboard'}">
+                        <span class="contact-icon">
+                            <i class="ri-mail-send-line"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>History</h3>
+                        </div>
+                    </router-link>
+                </div>
+            </div>
+        </aside>
+
         <section class="col-md-9">
             <div class="convert-box">
                 <ul class="convert-tablist list-style" role="tablist">

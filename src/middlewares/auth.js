@@ -13,11 +13,11 @@ export function isAuth({ next, store }) {
  
 // ensure user is guest
 export function isGuest({ next, store, router }) {
-    // if (store.state.auth.isLogged) {
-    //     return next({
-    //         name: 'monitor'
-    //     })
-    // }
+    if (store.state.auth.isLogged) {
+        return next({
+            name: 'dashboard'
+        })
+    }
     return next()
 }
 
