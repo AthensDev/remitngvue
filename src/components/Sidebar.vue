@@ -26,6 +26,16 @@
                     </router-link>
                 </div>
                 <div class="">
+                    <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/send'&&'active-tab'"  :to="{name: 'dashboard-send'}">
+                        <span class="contact-icon">
+                            <i class="ri-exchange-line"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>Request Money</h3>
+                        </div>
+                    </router-link>
+                </div>
+              <!--   <div class="">
                     <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/history'&&'active-tab'" :to="{name: 'dashboard'}">
                         <span class="contact-icon">
                             <i class="ri-history-fill"></i>
@@ -34,7 +44,18 @@
                             <h3>History</h3>
                         </div>
                     </router-link>
+                </div> -->
+                <div class="">
+                    <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/wallet'&&'active-tab'" :to="{name: 'dashboard-wallet'}">
+                        <span class="contact-icon">
+                            <i class="ri-wallet-line"></i>
+                        </span>
+                        <div class="contact-info" style="margin: auto">
+                            <h3>My E-Naira Wallet</h3>
+                        </div>
+                    </router-link>
                 </div>
+
             </div>
         </aside>
 </template>
@@ -104,7 +125,7 @@
         top: 0 !important;
     }
     .theme-light .active-tab {
-        border: 2px solid black;
+        border: 2px solid #ccc;
     }
     .theme-dark .active-tab {
         border: 2px solid white;
