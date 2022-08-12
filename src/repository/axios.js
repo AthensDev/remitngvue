@@ -19,7 +19,7 @@ export default function () {
     instance = axios.create({
       baseURL: `${config.baseUrl}`,
       headers: {
-        authorization: 'Bearer ' + token,
+        'Authorization': token,
         // 'Access-Control-Allow-Origin' : '*',
         // 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
       }

@@ -26,7 +26,7 @@
                     </router-link>
                 </div>
                 <div class="">
-                    <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/send'&&'active-tab'"  :to="{name: 'dashboard-send'}">
+                    <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/request'&&'active-tab'"  :to="{name: 'dashboard-request'}">
                         <span class="contact-icon">
                             <i class="ri-exchange-line"></i>
                         </span>
@@ -45,7 +45,7 @@
                         </div>
                     </router-link>
                 </div> -->
-                <div class="">
+                <!-- <div class="">
                     <router-link class="contact-item dashboard-tabs" :class="currentPath == '/dashboard/wallet'&&'active-tab'" :to="{name: 'dashboard-wallet'}">
                         <span class="contact-icon">
                             <i class="ri-wallet-line"></i>
@@ -54,7 +54,7 @@
                             <h3>My E-Naira Wallet</h3>
                         </div>
                     </router-link>
-                </div>
+                </div> -->
 
             </div>
         </aside>
