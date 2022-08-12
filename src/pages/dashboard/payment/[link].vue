@@ -13,7 +13,7 @@
             <div class="convert-box">
                 <ul class="convert-tablist list-style" role="tablist">
                     <li style="width: 33%" class="nav-item">
-                        <a class="active" href="/?step=1"><i class="ri-exchange-dollar-line"></i>Send Money</a>
+                        <a class="active" href="/?step=1"><i class="ri-exchange-dollar-line"></i>Pay Money</a>
                     </li>
                     <!--   <li style="width: 33%" class="nav-item">
                         <a href="/?step=2"><i class="ri-send-plane-line"></i>Confirm</a>
@@ -29,14 +29,14 @@
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label for="country_from">E-naira Wallet Address</label>
-                                    <input required v-model="wallet" type="text" name="">
+                                    <input readonly disabled required v-model="detail.wallet_address" type="text" name="">
                                 </div>
                             </div>
 
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="country_from">Amount</label>
-                                    <input required v-model="amount" type="number" name="">
+                                    <input disabled required v-model="detail.amount" type="number" name="">
                                 </div>
                             </div>
                             <div class="col-lg-1 text-center">
@@ -47,12 +47,8 @@
                             <div class="col-lg-5">
                                 <div class="form-group">
                                     <label for="currency_to">Currency</label>
-                                    <select required v-model="currency" name="country_to" id="country_to">
-                                        <option value="EUR">EUR - Euro</option>
-                                        <option value="USD">USD - US Dollar</option>
-                                        <option value="CAD">CAD - Canadian Dollar</option>
-                                        <option value="GHS">GHS - Ghana Cedis</option>
-                                        <option value="NGN">NGN - Nigeria Naira</option>
+                                    <select disabled required v-model="detail.currency" name="country_to" id="country_to">
+                                        <option :value="detail.currency">{{detail.currency}}</option>
                                     </select>
                                 </div>
                             </div>
@@ -103,35 +99,45 @@
         },
         data() {
             return {
-                amount: "",
-                wallet: "",
-                currency: "USD"
+                detail: {
+
+                }
             };
         },
         computed: {
             ...mapGetters("user", ["user"]),
         },
-        mounted() {},
+        async mounted() {
+            let paymentLink = this.router.currentRoute.value.params.link
+            await this.getPayment(paymentLink)
+        },
         methods: {
-            ...mapActions('auth', ['login', 'logout']),
+            ...mapActions('payment', ['getPaymentLinkDetails']),
 
             generateReference() {
                 let date = new Date();
                 return date.getTime().toString();
             },
 
+            async getPayment(link){
+                await this.getPaymentLinkDetails({link})
+                .then(res =>{
+                    this.detail = res.payment_details
+                })
+                console.log(this.detail)
+            },
 
             makePayment() {
                 FlutterwaveCheckout({
                     public_key: this.$config.FLWPUBK,
                     tx_ref: this.generateReference(),
-                    amount: this.amount,
-                    currency: this.currency,
+                    amount: this.detail.amount,
+                    currency: this.detail.currency,
                     payment_options: "card, banktransfer, ussd",
                     redirect_url: "https://remitng.netlify.app/dashboard/confirm",
                     meta: {
                         customer_email: this.user.email,
-                        beneficiary_wallet: this.wallet,
+                        beneficiary_wallet: this.detail.wallet_address,
                     },
                     customer: {
                         email: this.user.email ?? "rose@unsinkableship.com",

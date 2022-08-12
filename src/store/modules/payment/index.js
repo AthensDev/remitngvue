@@ -17,8 +17,9 @@ const actions = {
     },
 
     
-    async verifyPaymentLink({ commit, dispatch }, data) {
-        let res = await payment.verify(data)
+    async getPaymentLinkDetails({ commit, dispatch }, data) {
+        let res = await payment.fetchPaymentLink(data)
+        return res.data.data
     },
 
     

@@ -13,7 +13,7 @@
             <div class="convert-box">
                 <ul class="convert-tablist list-style" role="tablist">
                     <li style="width: 33%" class="nav-item">
-                        <a class="active" href="/?step=1"><i class="ri-exchange-dollar-line"></i>Send Money</a>
+                        <a class="active" href="/?step=1"><i class="ri-exchange-dollar-line"></i>Pay Money</a>
                     </li>
                     <!--   <li style="width: 33%" class="nav-item">
                         <a href="/?step=2"><i class="ri-send-plane-line"></i>Confirm</a>
@@ -108,16 +108,26 @@
                 currency: "USD"
             };
         },
-        computed: {},
-        mounted() {},
+        computed: {
+            ...mapGetters("user", ["user"]),
+        },
+        mounted() {
+            let path = this.$route.path
+            console.log(path)
+        },
         methods: {
-            ...mapActions('auth', ['login', 'logout']),
+            ...mapActions('payment', ['verifyPaymentLink']),
 
             generateReference() {
                 let date = new Date();
                 return date.getTime().toString();
             },
 
+            getPayment(){
+
+                this.$route.path
+                // this.verifyPaymentLink
+            },
 
             makePayment() {
                 FlutterwaveCheckout({
